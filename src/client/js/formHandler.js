@@ -1,9 +1,10 @@
 export const formHandler =(stateValue, countryValue)=>{
     console.log(stateValue,countryValue)
     postData(stateValue,countryValue  )
-    .then(function(stateValue,countryValue){
-      console.log(stateValue,countryValue)
-      updateUI(stateValue,countryValue)
+    .then(data =>{
+      console.log(data);
+      // console.log(stateValue,countryValue)
+      // updateUI(stateValue,countryValue)
     })
 
 }
@@ -17,15 +18,15 @@ const postData = async(stateValue = '',countryValue='') => {
       headers: {
           'Content-Type': 'application/json',
       },
-      body, // body data type must match "Content-Type" header        
+      body: JSON.stringify({stateValue,countryValue}),    
   });
 
   try {
-      const newData = await response.json();
-      console.log(newData.data);
+    
+      const newData = (await response.json()).data;
       return newData
   } catch (error) {
-      //console.log("error", error);
+      console.log("error", error);
   }
 }
 
