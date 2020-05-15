@@ -1,10 +1,7 @@
 export const formHandler =(stateValue, countryValue)=>{
-    console.log(stateValue,countryValue)
-    postData(stateValue,countryValue  )
+    postData(stateValue,countryValue)
     .then(data =>{
-      console.log(data);
-      // console.log(stateValue,countryValue)
-      // updateUI(stateValue,countryValue)
+      updateUI(data)
     })
 
 }
@@ -31,7 +28,7 @@ const postData = async(stateValue = '',countryValue='') => {
 }
 
 
-function updateUI(stateValue,countryValue) {
+function updateUI(data) {
   //console.log(data);
 
 }
