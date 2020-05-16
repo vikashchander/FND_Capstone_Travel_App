@@ -10,7 +10,7 @@ app.use(express.static("dist"));
 
 app.get("/", (req, res) => {
   //res.sendFile(path.join(__dirname, "../client/views", "index.html"))
-  res.sendFile("dist/index.html"), res.status(200).json(data);
+res.status(200).json(data);
 });
 app.post("/trip", async (req, res) => {
   const { stateValue, countryValue } = req.body;

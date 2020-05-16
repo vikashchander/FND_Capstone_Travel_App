@@ -29,6 +29,9 @@ const postData = async(stateValue = '',countryValue='') => {
 
 
 function updateUI(data) {
-  //console.log(data);
-
+  console.log("vikash",data);
+  const imgTag = document.createElement("img");
+  imgTag.setAttribute('src',data.imageURL)
+  const addTag= document.getElementById('main');
+  addTag.appendChild(imgTag);
 }

@@ -1,4 +1,107 @@
-#main{
-    border:2px solid blueviolet;
-    background: cyan;
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.grid-container {
+	background-image: linear-gradient(45deg, #7175da, #9790F2);
+	font-family: 'Muli', sans-serif;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(30px, auto);
+    gap: 6px;
+    grid-template-areas:
+    "nav nav"
+    "card card";
+
+}
+
+.header{
+ grid-area: nav;
+ height: 4rem;
+}
+.main-container{
+    grid-area: card;
+    flex-flow: row wrap;
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+	justify-content: center;
+}
+
+.card {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+	max-width: 100%;
+	margin: 20px;
+	overflow: hidden;
+	width: 600px;
+}
+
+.card h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.card h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
+
+.card-preview {
+	color: #fff;
+	max-width: 250px;
+}
+
+
+.card-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+
+.btn {
+	background-color: #140b91;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+    position: absolute;
+    margin-left: 2rem;
+	letter-spacing: 1px;
+}
+.btn:hover {
+	background-color: #2A265F;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+	padding: 12px 25px;
+	position: absolute;
+    margin-left: 2rem;
+	letter-spacing: 1px;
+}
+.trip-search{
+ border: solid #25215b;
+ border-radius: 3rem;
+ padding: 0.5rem;
+ text-align: center;
+}
+.trip-search:focus{
+ border: solid #0e0493;
+ background-color:#eae8e8;
+ border-radius: 3rem;
+ padding: 0.5rem;
+ text-align: center;
 }

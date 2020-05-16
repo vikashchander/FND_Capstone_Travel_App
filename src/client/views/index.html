@@ -5,30 +5,36 @@
 <title>Travel App</title>
 </head>
  <body>
-<div id = "app">
-  <div class ="headline">
-    Travel APP vikash
-  </div>
-  <div id="search-value">
-     <div>
-         <input id='state' placeholder="Enter State" type="text" required  >
-         <input id='country' placeholder="Enter Country" type="text" required>
-         <input type="date" id="start" name="trip-start"
-       value="2020-05-22"
-       min="2020-05-01" max="2032-12-31">
-         <input id='submit' type="button" value="Submit" >
-     </div>
-  </div>
-  <div id="main">
-    <img src="https://cdn.pixabay.com/photo/2016/06/25/12/48/go-pro-1478810__340.jpg" alt="">
-    <div id='result'>
-      <h5>My trip to:</h5>
-      <p>Paris, France is 220 days away</p>
-      <p>Typical weather for then is </p>
-      <p>High - 46 <span>Low -35</span> </p>
-      <p>Mostly cloudy thought the day </p>
+   <div class='grid-container'>
+  <nav class ="header">
+     <h2>Travel App</h4>
+     </nav>
+    <div class='main-container'>
+      <div>
+      <h1>
+        Planning your trips by easy ways 
+      </h1>
+       <form class="form-fields">
+        	<input class="trip-search" type="text" placeholder="Delhi">
+        	<input class="trip-search" type="text" placeholder="India">
+        	<input class="trip-search" type="Date" value="2020-05-20">
+         <input class="btn"  type="submit" name="" id="" value="Add trip">
+       </form>
+    </div> 
+    <div class="card-container">
+      <div class="card">
+          <img class="card-img card-preview" src="https://cdn.pixabay.com/photo/2020/01/15/12/57/kyrgyzstan-4767882__340.jpg" alt="" srcset="">
+        <div class="card-info">
+          <h2>My trip : Delhi,India</h2>
+          <h6>Departing: 02/12/2020</h6>
+          <h5>Delhi, India is days aways</h5>
+          <h3>Typical Weather for then is :</h3>
+          <h5>High: 47 , Low :35</h5>
+          <h6>Mostly cloudy throughout the day</h6>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
+    </div>
 </body>
 </html>
