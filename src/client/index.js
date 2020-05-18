@@ -11,7 +11,6 @@ submitBtn.addEventListener('click',(event)=>{
     if(stateData.value ===''||countryData.value ==='')
       alert('plz enter valid data');
       else
-      console.log(stateData.value,countryData.value,date.value)
       formHandler(stateData.value,countryData.value,date.value);
 })
 
