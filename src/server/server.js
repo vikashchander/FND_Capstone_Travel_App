@@ -7,7 +7,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 const data = [];
 app.use(express.static("dist"));
-
 app.get("/", (req, res) => {
   //res.sendFile(path.join(__dirname, "../client/views", "index.html"))
 res.status(200).json(data);
@@ -35,12 +34,12 @@ app.post("/trip", async (req, res) => {
   const pixabayImg = (
     await (
       await fetch(
-        `https://pixabay.com/api/?key=${process.env.Pixibay_Api_Key}&q=${countryValue}&image_type=illustration&category=travelling&min_width=200`
+        `https://pixabay.com/api/?key=${process.env.Pixibay_Api_Key}&q=${countryValue}&image_type=illustration&category=travelling&min_width=300`
       )
     ).json()
   ).hits;
 
-  const imageURL = pixabayImg[2].webformatURL;
+  const imageURL = pixabayImg[2].previewURL;
   const { city_name, weather, temp } = weatherbitInfo.data[0];
   data.unshift({
     stateValue,
