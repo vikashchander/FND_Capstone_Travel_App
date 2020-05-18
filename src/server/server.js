@@ -7,11 +7,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 const data = [];
 app.use(express.static("dist"));
-app.get("/", (req, res) => {
-  //res.sendFile(path.join(__dirname, "../client/views", "index.html"))
-res.status(200).json(data);
-});
-app.post("/trip", async (req, res) => {
+app.post("/trips", async (req, res) => {
   const { stateValue, countryValue } = req.body;
   const countryData = countryValue.substring(0, 2).toUpperCase();
 
@@ -49,6 +45,11 @@ app.post("/trip", async (req, res) => {
   });
  // console.log({ data: data[0] });
   res.status(201).json({ data: data[0] });
+});
+
+app.get("/", (req, res) => {
+  //res.sendFile(path.join(__dirname, "../client/views", "index.html"))
+res.status(200).json(data);
 });
 
 // designates what port the app will listen to for incoming requests
