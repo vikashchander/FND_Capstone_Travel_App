@@ -13,7 +13,6 @@ submitBtn.addEventListener('click',(event)=>{
       else
       formHandler(stateData.value,countryData.value,date.value);
 })
-
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
