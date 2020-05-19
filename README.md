@@ -15,6 +15,9 @@ Remember that once you clone, you will still need to follows steps:
 - Development command (npm run build-dev)  
 - test command (npm test)
 
+### Suggestions to Make Your Project Stand Out!
+ - Pull in an image for the country from Pixabay API when the entered location brings up no results (good for obscure localities). 
+
 ## Check This Project  Rubrics 
 
 you can check this app rubic:[Udacity's Rubrics](https://review.udacity.com/#!/rubrics/2669/view)

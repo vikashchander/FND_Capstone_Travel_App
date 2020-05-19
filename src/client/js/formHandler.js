@@ -25,11 +25,15 @@ const postData = async (stateValue = "", countryValue = "") => {
 };
 
 function updateUI(data) {
+  //  create new card div on every new trip
+  console.log(data,'vikash')
   const stateData = document.getElementById("state");
   const countryData = document.getElementById("country");
   const date = document.getElementById("date");
   var today = new Date();
-  var presentDate =`${today.getFullYear()}-0${(today.getMonth() + 1)}-${today.getDate()}`;
+  var presentDate = `${today.getFullYear()}-0${
+    today.getMonth() + 1
+  }-${today.getDate()}`;
   stateData.value = "";
   countryData.value = "";
   date.value = `${presentDate.toString()}`;
@@ -37,6 +41,7 @@ function updateUI(data) {
   cardContainer.className = " card";
   const cardInfo = document.createElement("div");
   cardInfo.className = " card-info";
+  //get api data and represent in the card
   const imgTag = document.createElement("img");
   imgTag.className = " card-preview";
   imgTag.setAttribute("src", data.imageURL);
@@ -48,6 +53,7 @@ function updateUI(data) {
   weatherData.innerText = `Temperature : ${data.weatherInfo.temp} °C`;
   const weatherDesc = document.createElement("h6");
   weatherDesc.innerText = `${data.weatherInfo.weather.description}`;
+  // get api data append with the mainContainer of the card
   cardInfo.appendChild(tripData);
   cardInfo.appendChild(weatherInfo);
   cardInfo.appendChild(weatherData);
