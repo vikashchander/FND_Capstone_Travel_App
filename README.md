@@ -10,7 +10,7 @@ Remember that once you clone, you will still need to follows steps:
  First, you will need to go
   - Add  Weatherbit_API_key [here](https://www.weatherbit.io/account/create)
   - Add Pixibay_Api_Key  [here](https://pixabay.com/api/docs/)
-  - Add Geonames_Api_Key [here](www.geonames.org/export/web-services.html)
+  - Add Geonames_Api_Key [here](https://www.geonames.org/export/web-services.html)
 - Production command (npm run build-prod)  
 - Development command (npm run build-dev)  
 - test command (npm test)
